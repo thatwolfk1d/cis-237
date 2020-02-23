@@ -16,9 +16,21 @@
     <h2>Rating Confirmed!</h2>
     <?php
         echo '<p>Rating Confirmed at ';
-        echo date( format 'H:i jS F Y');
+        echo date('H:i jS F Y');
         echo '</p>';
-        echo $POST_
+            
+        echo '<p>Your rating was processed with the following details:</p>';
+        echo 'Movie Name:'. htmlspecialchars($mname).'<br/>';
+        echo 'Director Name:'. htmlspecialchars($dname).'<br/>';
+        echo 'Artists:'. htmlspecialchars($artist). '<br/>';
+        echo 'Genre:'. htmlspecialchars($genre). '<br/>';
+        echo 'Rating:'. htmlspecialchars($rating). '<br/>';
+        
+        
+
+
+
+
 
     ?>
 </body>
