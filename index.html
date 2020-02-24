@@ -8,8 +8,8 @@
     <br />
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css" />
+    <!--<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css" />-->
 
 
 </head>
@@ -17,7 +17,14 @@
 <!--PART1-->
 <!--Build an html form to enter movie information-->
 <body>
+    <!--Bootstrap navbar-->
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">MovieRater</a>
+                    <a class="nav-link" href="index.html">Add Movie</a>
+                    <a class="ratingresults.php">List Movies</a>          
+        </nav>
 
+    <!--Form-->
     <form action="ratingprocessed.php" method="post">
         <label for="mname">Movie Name:</label> <span class="required">*</span>
         <input type="text" name="mname" placeholder="Movie Name" required /><br />
@@ -60,19 +67,6 @@
 
     </form>
 
-
-    <!--Bootstrap navbar-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-logo" href="#">MovieRater</a>
-            </div>
-            <ul class="navbar navbar-nav">
-                <li><a href="#">Add Movie</a></li>
-                <li><a href="#">List Movies</a></li>
-            </ul>
-        </div>
-    </nav>
 
 
 </body>
