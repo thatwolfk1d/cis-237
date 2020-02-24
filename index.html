@@ -1,76 +1,81 @@
-﻿<DOCTYPE html>
-    <head>
+﻿<!DOCTYPE html>
+<head>
 
-        <title>Lab1</title>
+    <title>Movie Rater</title>
 
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><br />
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
-
-    <!--PART1-->
-    <!--Build an html form to enter movie information-->
-    <body>
-
-        <form>
-            <div class="form-row"></div>
-            <label for="mname">Movie Name:</label>
-            <input type="text" id="mname" name="mname" placeholder="Movie Name" /><br />
-
-            <label for="dname">Director Name:</label>
-            <input type="text" id="dname" name="dname" placeholder="Director Name" /><br />
-
-            <label for="artists">Artists:</label>
-            <input type="text" id="artist" name="artist" placeholder="Artists" /><br />
-
-            <label for="genre">Genre:</label>
-            <select id="genre" name="genre">
-                <option selected></option>
-                <option value="comedy">Comedy</option>
-                <option value="horror">Horror</option>
-                <option value="drama">Drama</option>
-                <option value="documentary">Documentary</option>
-                <option value="mystery">Mystery</option>
-            </select><br />
-
-            <h3>RATING:</h3>
-
-            <input type="radio" id="1" name="1" value="1" />
-            <label for="1">1</label>
-
-            <input type="radio" id="2" name="2" value="2" />
-            <label for="2">2</label>
-
-            <input type="radio" id="3" name="3" value="3" />
-            <label for="3">3</label>
-
-            <input type="radio" id="4" name="4" value="4" />
-            <label for="4">4</label>
-
-            <input type="radio" id="5" name="5" value="5" />
-            <label for="5">5</label><br />
-
-            <input type="submit" value="Submit" />
-
-        </form>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <br />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css" />
 
 
-        <!--Bootstrap navbar-->
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-logo" href="#">MovieRater</a>
-                    </div>
-                    <ul class="navbar navbar-nav">
-                        <li><a href="#">Add Movie</a></li>
-                        <li><a href="#">List Movies</a></li>
-                    </ul>
-                </div>
-            </nav>
+</head>
+
+<!--PART1-->
+<!--Build an html form to enter movie information-->
+<body>
+
+    <form action="ratingprocessed.php" method="post">
+        <label for="mname">Movie Name:</label> <span class="required">*</span>
+        <input type="text" name="mname" placeholder="Movie Name" required /><br />
+
+        <label for="dname">Director Name:</label> <span class="required">*</span>
+        <input type="text" name="dname" placeholder="Director Name" required /><br />
+
+        <label for="artists">Artists:</label>
+        <input type="text" name="artist" placeholder="Artists" /><br />
+
+        <label for="genre">Genre:</label>
+        <select name="genre">
+            <option selected></option>
+            <option value="comedy">Comedy</option>
+            <option value="horror">Horror</option>
+            <option value="drama">Drama</option>
+            <option value="documentary">Documentary</option>
+            <option value="mystery">Mystery</option>
+        </select><br />
+
+        <h3>RATING:</h3>
+
+        <input type="radio" name="rating" value="1" />
+        <label for="1">1</label>
+
+        <input type="radio" name="rating" value="2" />
+        <label for="2">2</label>
+
+        <input type="radio" name="rating" value="3" />
+        <label for="3">3</label>
+
+        <input type="radio" name="rating" value="4" />
+        <label for="4">4</label>
+
+        <input type="radio" name="rating" value="5" />
+        <label for="5">5</label><br />
+
+        <input type="submit" value="Submit" />
 
 
-    </body>
+    </form>
+
+
+    <!--Bootstrap navbar-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-logo" href="#">MovieRater</a>
+            </div>
+            <ul class="navbar navbar-nav">
+                <li><a href="#">Add Movie</a></li>
+                <li><a href="#">List Movies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+</body>
 
     </html>
 

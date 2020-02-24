@@ -25,13 +25,6 @@
         echo 'Artists:'. htmlspecialchars($artist). '<br/>';
         echo 'Genre:'. htmlspecialchars($genre). '<br/>';
         echo 'Rating:'. htmlspecialchars($rating). '<br/>';
-        
-        
-
-
-
-
-
     ?>
 </body>
 </html>
