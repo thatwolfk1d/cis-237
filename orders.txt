@@ -1,2 +1,0 @@
-19:53, 23rd February 2020	The Big Lebowski :Movie Name 	Cohen Brothers :Director Name 	John Goodman :Artist 	comedy :Genre 	5 :Rating 
-19:54, 23rd February 2020	Knives Out :Movie Name 	Steven Spielberg :Director Name 	Daniel Craig :Artist 	mystery :Genre 	5 :Rating 

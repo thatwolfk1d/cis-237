@@ -1,31 +1,39 @@
-﻿<!DOCTYPE html>
-<head>
+<?php
+require("base.php");
 
-    <title>Movie Rater</title>
+$id=null;
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <br />
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css" />-->
+if(isset($_GET) && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $Movie = $FileMovieManager->readOneById($id);
+}
+
+if (isset($_POST) && !empty($_POST)) {
+    extract($_POST);
+    $Movie = new Movie($movie_name,$director_name,$artist,$genre,$rating);
+    if ($FileMovieManager->update($id, $Movie)) {
+        header('Location: ratingprocessed.php');
+   }
+}
+
+?>
 
 
-</head>
-
-<!--PART1-->
-<!--Build an html form to enter movie information-->
+<!DOCTYPE html>
+<html>
+<?php require("head.php");?>
 <body>
-    <!--Bootstrap navbar-->
-        <nav class="navbar sticky-top navbar-light bg-light">
-          <a class="navbar-brand" href="index.html">MovieRater</a>
-                    <a class="nav-link" href="index.html">Add Movie</a>
-                    <a class="ratingresults.php">List Movies</a>          
-        </nav>
+<!--Bootstrap navbar-->
+<?php require("nav.php");?>
 
-    <!--Form-->
-    <form action="ratingprocessed.php" method="post">
+    <div class="container-fluid">
+        <div class="row">
+            <h1>Edit Rating</h1>
+        </div>
+
+        <div class="container-fluid">
+       <h1>Movie Rating Form</h1>
+        <form action="ratingprocessed.php" method="post">
         <label for="mname">Movie Name:</label> <span class="required">*</span>
         <input type="text" name="mname" placeholder="Movie Name" required /><br />
 
@@ -66,17 +74,9 @@
 
 
     </form>
+    </div>
 
 
-
+    </div>
 </body>
-
-    </html>
-
-
-
-
-
-
-
-
+</html>
